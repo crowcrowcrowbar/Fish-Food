@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ToolTake : MonoBehaviour, Interactable
+public class ToolTake : MonoBehaviour, IInteractable
 {
     public bool isTaken = false;
     public void Interact()
