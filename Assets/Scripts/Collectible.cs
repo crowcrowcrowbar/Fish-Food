@@ -3,6 +3,7 @@ using UnityEngine;
 public class Collectible : MonoBehaviour
 {
     public bool isCollected = false;
+    public GameObject player;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,4 +16,12 @@ public class Collectible : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    public void CatchFish()
+    {
+        isCollected = true;
+        Destroy(this.gameObject);
+
+    }
+
 }

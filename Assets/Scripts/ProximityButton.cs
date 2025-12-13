@@ -19,9 +19,9 @@ public class ProximityButton : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(interactionkey) && playerInRange)
+        if (Input.GetKeyDown(interactionkey) && playerInRange && !isFishCaught)
         {
-            fish.transform.position = player.transform.position;
+            fish.CatchFish();
             isFishCaught = true;
             buttonPromptUI.SetActive(false);
             this.gameObject.SetActive(false);
